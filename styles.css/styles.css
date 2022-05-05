@@ -1,3 +1,19 @@
+/* FONTS */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+:root{
+    --basic-color:#6D72DE;
+    --main-bg-color:#f2f2f2;
+    --text-color:#6E728E;
+    --bold-text:#4a4d60;
+    --bg-color:#fff
+}
 /* global */
 *{box-sizing: border-box;}
 
@@ -10,11 +26,11 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    line-height: 22px;
-    font-family: "rubik" "rubik mono one" "sans-serif";
-    color:#4a4b4c;
-    background-color:#eee;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: "Montserrat","Arial",sans-serif;
+    color:var(--text-color);
+    background-color:var(--main-bg-color);
     flex-wrap: nowrap;
 }
 img{
@@ -26,7 +42,7 @@ img{
     outline-offset: 3px;
 }
 .container{
-    max-width: 1260px;
+    max-width: 1110px;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
