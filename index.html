@@ -11,7 +11,19 @@
 <body>
     <main class="site-main container">
         <h1 class="site-theme">Our Pricing</h1>
-        <div class="switch"></div>
+        <!-- switch -->
+        <form class="toggler-form" action="https://echo.htmlacademy.ru" method="get">
+            <input class="left visuallyhidden" type="radio" name="switch-form" value="anually" id="anually-price">
+            <input class="right visuallyhidden" type="radio" name="switch-form" value="monthly" id="monthly-price">
+            <label class="for-per-year" for="anually-price">Anually</label>
+            <!-- switch control -->
+            <div class="toggler">
+                <div class="toggler-circle"></div>
+                <label class="anual-cost" for="anually-price"></label>
+                <label class="monthly-cost" for="monthly-price"></label>
+            </div>
+            <label class="for-per-month" for="monthly-price">Monthly</label>
+        </form>
         <section class="about-price">
             <h2 class="visuallyhidden">Our-prices</h2>
             <div class="box-wrapper">

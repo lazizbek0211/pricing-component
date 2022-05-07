@@ -41,7 +41,7 @@ img{
     max-width: 100%;   
 }
 *:focus{
-    outline: 3px dashed #6D72DE;
+    outline: 3px solid #6D72DE;
     outline-offset: 3px;
 }
 .container{
@@ -71,6 +71,75 @@ img{
     font-size: 32px;
     line-height: 39px;
     text-align: center;
+    margin: 0;
+}
+
+.toggler-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 64px;
+    padding-top: 44px;
+}
+.toggler{
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 32px;
+    border-radius: 16px;
+    background-image:linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    position: relative;
+    margin-right: 28px;
+    margin-left: 28px;
+}
+.toggler-circle{
+    transition: margin 0.3s ease;
+    cursor: pointer;
+}
+.anual-cost, .monthly-cost{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+.left:checked ~ .toggler .monthly-cost{
+    transform: translateY(-10px);
+}
+.right:checked ~ .toggler .anual-cost{
+    transform: translateY(-10px);
+}
+.left:checked ~ .toggler .monthly-cost,
+.right:checked ~ .toggler .anual-cost{
+    z-index: 5;
+}
+.right:checked ~ .toggler .toggler-circle
+{
+    margin-left: 30px;
+}
+
+.toggler-circle{
+    display: flex;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius:100%;
+    background-color: #fff;
+}
+.for-per-month{
+    color: rgb(110, 114, 142,);
+    cursor: pointer;
+}
+.for-per-month:hover{
+    color:rgba(110, 114, 142, 0.5);
+}
+.for-per-year{
+    color: rgb(110, 114, 142,);
+    cursor: pointer;
+}
+.for-per-year:hover{
+    color:rgba(110, 114, 142, 0.5);
 }
 .box-wrapper {
     display: flex;
@@ -85,7 +154,7 @@ img{
     background-color:#fff;
     width: 350px;
     box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
-border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
 }
 .top-text {
     margin: 0;
@@ -132,6 +201,7 @@ border-radius: 10px 0px 0px 10px;
     line-height: 28px;
 }
 .more{
+    border: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,17 +209,31 @@ border-radius: 10px 0px 0px 10px;
     text-decoration: none;
     color:#fff;
     padding: 14px 66px;
+    background-color: #696EDD;
     background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
     margin-top: 32px;
     border-radius: 6px;
+    transition:background-color 0.3s ease,
+    color 0.3s ease,border 0.3s ease;
+}
+.more:hover{
+    background-image:none;
+    color:#6D72DE ;
+    background-color: #fff;
+    border-color: #6D72DE;
+}
+.white-link:hover{
+    background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    color:#fff ;
+    border-color: #fff;
 }
 .pro{
     padding-top: 54px;
     padding-bottom: 54px;
     border-radius: 10px;
     background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
-box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
-border-radius: 10px;
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    border-radius: 10px;
 }
 .white-text{
     color: #fff;
